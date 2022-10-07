@@ -194,9 +194,9 @@ class Form_controller(QtWidgets.QWidget):
 
         def blur(val):
             if val > 0:
-                kx = 2*val+1
-                ky = 2*val+1
-                bil_blur = cv2.bilateralFilter(self.img, 21, kx, ky)
+                kx = 90
+                ky = 90
+                bil_blur = cv2.bilateralFilter(self.img, 11, kx, ky)
                 cv2.imshow("Result", bil_blur)
             else:
                 return self.img
